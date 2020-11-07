@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -120,12 +120,6 @@ F 3 "" H 1400 2400 50  0001 C CNN
 	1    1400 2400
 	1    0    0    -1  
 $EndComp
-Text Label 2850 1600 0    50   ~ 0
-5V
-Text Label 3350 3300 0    50   ~ 0
-RX
-Text Label 3350 3400 0    50   ~ 0
-TX
 Wire Wire Line
 	3150 3300 3350 3300
 Wire Wire Line
@@ -525,8 +519,6 @@ F 3 "~" H 5100 2000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5800 2900 5900 2900
-Text Label 5700 1000 0    50   ~ 0
-V_MOT
 Text Label 7000 2300 0    50   ~ 0
 5V
 Wire Wire Line
@@ -587,11 +579,38 @@ F 3 "~" H 7700 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 9850 1700 1200 650 
+S 8850 850  1950 200 
 U 5F90A713
-F0 "Sheet5F90A712" 50
+F0 "atmega128" 50
 F1 "atmega.sch" 50
-F2 "5V" I L 9850 1800 50 
-F3 "RX" I L 9850 1900 50 
+$EndSheet
+$Sheet
+S 8850 1300 1950 200 
+U 5F969166
+F0 "drv8825" 50
+F1 "drv8825.sch" 50
+$EndSheet
+Wire Wire Line
+	3150 3100 3550 3100
+Wire Wire Line
+	3150 3000 3550 3000
+Text GLabel 3900 1600 2    50   Input ~ 0
+5V
+Text Label 2850 1600 0    50   ~ 0
+5V
+Wire Wire Line
+	3650 1600 3900 1600
+Connection ~ 3650 1600
+Text GLabel 5700 1000 0    50   Input ~ 0
+V_MOT
+Text GLabel 3550 3000 2    50   Input ~ 0
+SDA
+Text GLabel 3550 3100 2    50   Input ~ 0
+SCL
+$Sheet
+S 8850 1750 1950 200 
+U 5FA2B6C4
+F0 "L293D" 50
+F1 "L293D.sch" 50
 $EndSheet
 $EndSCHEMATC
